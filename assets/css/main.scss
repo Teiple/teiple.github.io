@@ -1,0 +1,26 @@
+---
+---
+@import "minima";
+
+
+@font-face {
+  font-family: "ABeeZee";
+  src: url("{{ site.baseurl }}/assets/fonts/ABeeZee-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ABeeZee";
+  src: url("{{ site.baseurl }}/assets/fonts/ABeeZee-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  font-family: "ABeeZee", "Open Sans", sans-serif;
+}
+
+img.logo {
+  width: 42px
+}
