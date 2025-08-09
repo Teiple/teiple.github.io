@@ -22,5 +22,9 @@ body {
 }
 
 img.logo {
-  width: 42px
+  height: 48px;
+}
+
+.site-header {
+  background-image: url("{{ site.url }}{{ site.baseurl }}/assets/images/header-background.jpg");
 }

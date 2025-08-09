@@ -2,12 +2,18 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
+  border-top: 2px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  // background: linear-gradient(to top, #0b120b, #658a40);
+  // background-image: url("http://localhost:4000/teiple.github.io/assets/images/header-background.jpg");
+  background-size: cover;        // make it cover the whole area
+  background-position: center;   // center the image
+  background-repeat: no-repeat;  // prevent tiling
 }
 
 .site-title {
@@ -40,7 +46,7 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: $text-color-inverted;
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
@@ -179,8 +185,13 @@
  * Page content
  */
 .page-content {
+  width: max-content;
   padding: $spacing-unit 0;
   flex: 1;
+  border-left: 1px solid $grey-color-light;
+  border-right: 1px solid $grey-color-light;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page-heading {
