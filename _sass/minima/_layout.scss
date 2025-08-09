@@ -14,6 +14,7 @@
   background-size: cover;        // make it cover the whole area
   background-position: center;   // center the image
   background-repeat: no-repeat;  // prevent tiling
+
 }
 
 .site-title {
@@ -46,12 +47,17 @@
   }
 
   .page-link {
+    // Background is quite dark
     color: $text-color-inverted;
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
+    }
+
+    @include media-query($on-palm) {
+      color: $text-color;
     }
   }
 
@@ -116,7 +122,7 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit 0;
+  padding: $spacing-unit $spacing-unit;
 }
 
 .footer-heading {
@@ -185,9 +191,10 @@
  * Page content
  */
 .page-content {
-  width: max-content;
-  padding: $spacing-unit 0;
-  flex: 1;
+  width: $content-width;
+  max-width: 100%;
+  // padding: $spacing-unit 0;
+  // flex: 1;
   border-left: 1px solid $grey-color-light;
   border-right: 1px solid $grey-color-light;
   margin-left: auto;
@@ -207,7 +214,7 @@
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: 0;
   }
 }
 
@@ -218,7 +225,8 @@
 
 .post-link {
   display: block;
-  @include relative-font-size(1.0);
+  font-size: $small-font-size;
+  //@include relative-font-size(1.0);
 }
 
 
@@ -226,6 +234,7 @@
 /**
  * Posts
  */
+
 .post-header {
   margin-bottom: $spacing-unit;
 }

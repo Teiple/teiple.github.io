@@ -8,7 +8,7 @@ $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
-$spacing-unit:     30px !default;
+$spacing-unit:     16px !default;
 
 $text-color:       #111 !default;
 $text-color-inverted: #ffffff !default;
@@ -18,6 +18,7 @@ $brand-color:      #56845b !default;
 $grey-color:       #445054 !default;
 $grey-color-light: lighten($grey-color, 60%) !default;
 $grey-color-dark:  darken($grey-color, 60%) !default;
+$grey-color-soft: lighten($grey-color, 65%) !default;
 
 $table-text-align: left !default;
 
@@ -34,6 +35,10 @@ $on-laptop:        800px !default;
 //     padding-left: $spacing-unit / 2;
 //   }
 // }
+
+$left-aside-width: 150px !default;
+$border-radius: 8px !default;
+
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;

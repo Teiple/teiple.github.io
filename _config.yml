@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Teiple's Blogs
+title: Teiple's blog
 email: teiple022@gmail.com
 description: >- # this means to ignore newlines until new section
   My personal space for everthing.
