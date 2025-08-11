@@ -18,13 +18,39 @@
 }
 
 body {
-  font-family: "ABeeZee", "Open Sans", sans-serif;
+  font-family: "ABeeZee";
 }
 
 img.logo {
   height: 48px;
 }
 
-.site-header {
+.main-header {
   background-image: url("{{ site.url }}{{ site.baseurl }}/assets/images/header-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  padding: $spacing-unit / 2 $spacing-unit / 2 $spacing-unit / 2 $spacing-unit * 2;
+  border-top: 2px solid $grey-color-dark;
+}
+
+.top-nav {
+  background-color: black;
+  max-width: 100%;
+  padding-right: $spacing-unit * 2;
+
+  background: linear-gradient( to bottom, rgba(140, 140, 140, 0.925) 0%, rgba(120, 120, 120, 0.925) 10%, rgba(45, 45, 45, 0.925) 50%, rgba(0, 0, 0, 0.925) 56%, rgba(0, 0, 0, 0.925) 70%, rgba(45, 45, 45, 0.925) 100% );
+
+  border-top: 2px solid $grey-color-dark;
+  border-bottom: 2px solid $grey-color-dark;
+
+  .page-link {
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+  }
+
+  @include media-query($on-palm){
+    border-bottom: none;
+  }
 }

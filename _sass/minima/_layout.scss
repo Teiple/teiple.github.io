@@ -2,19 +2,12 @@
  * Site header
  */
 .site-header {
-  border-top: 2px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
+  // border-top: 2px solid $grey-color-dark;
+  // border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
   position: relative;
-
-  // background: linear-gradient(to top, #0b120b, #658a40);
-  // background-image: url("http://localhost:4000/teiple.github.io/assets/images/header-background.jpg");
-  background-size: cover;        // make it cover the whole area
-  background-position: center;   // center the image
-  background-repeat: no-repeat;  // prevent tiling
-
 }
 
 .site-title {
@@ -36,7 +29,7 @@
 
 .site-nav {
   float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  line-height: $base-line-height * $base-font-size * 1.25;
 
   .nav-trigger {
       display: none;
@@ -193,8 +186,7 @@
 .page-content {
   width: $content-width;
   max-width: 100%;
-  // padding: $spacing-unit 0;
-  // flex: 1;
+  min-height: $min-page-height;
   border-left: 1px solid $grey-color-light;
   border-right: 1px solid $grey-color-light;
   margin-left: auto;
@@ -206,7 +198,11 @@
 }
 
 .post-list-heading {
-  @include relative-font-size(1.25);
+  @include relative-font-size(1.0);
+}
+
+.post-list-time-sort {
+  @include relative-font-size(1.0);
 }
 
 .post-list {
@@ -274,5 +270,44 @@
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
+  }
+}
+
+
+/*
+ * Container
+**/
+.middle-container {
+  display: flex;
+  flex-direction: row;
+  min-height: inherit; // See page-content
+  max-width: 100%;
+
+  @include media-query($on-palm){
+    display: block;
+    max-width: 100%;
+  }
+}
+
+
+/*
+ * Side bar
+ */
+.left-aside {
+  min-width: $left-aside-width;
+  max-width: $left-aside-width;
+  border-right: 1px solid $grey-color-light;
+  padding: $spacing-unit $spacing-unit;
+  background-color: $grey-color-soft;
+
+  @include media-query($on-palm){
+    min-width: 0;
+    max-width: 100%;
+    > .post-list {
+      max-height: 110px;
+      overflow-y: scroll;
+    }
+    border-right: none;
+    border-bottom: 1px solid $grey-color-light;
   }
 }

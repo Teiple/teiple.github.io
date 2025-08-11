@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: 0;
 }
 
 
@@ -47,7 +47,8 @@ ul, ol, dl, figure,
  */
 main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
-  padding: $spacing-unit $spacing-unit $spacing-unit $spacing-unit;
+  padding: $spacing-unit $spacing-unit;
+  // width: 100%;
 }
 
 
@@ -108,7 +109,8 @@ a {
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken($visited-color, 15%);
+    text-decoration: underline;
   }
 
   &:hover {
@@ -251,43 +253,5 @@ table {
   }
   td {
     border: 1px solid $grey-color-light;
-  }
-}
-
-
-/*
- * Container
-**/
-.middle-container {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  height: 100%;
-
-  @include media-query($on-palm){
-    flex-direction: column;
-  }
-}
-
-
-/*
- * Side bar
- */
-.left-aside {
-  min-width: $left-aside-width;
-  max-width: $left-aside-width;
-  border-right: 1px solid $grey-color-light;
-  padding: $spacing-unit $spacing-unit;
-  background-color: $grey-color-soft;
-
-  @include media-query($on-palm){
-    min-width: 0;
-    max-width: 100vh;
-    > .post-list {
-      max-height: 110px;
-      overflow-y: scroll;
-    }
-    border-right: none;
-    border-bottom: 1px solid $grey-color-light;
   }
 }

@@ -26,8 +26,9 @@ description: >- # this means to ignore newlines until new section
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: teiple.github.io
 url: https://teiple.github.io # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
 github_username:  Teiple
+youtube_username: "@teiple"
+author: Teiple
 
 # Build settings
 theme: minima

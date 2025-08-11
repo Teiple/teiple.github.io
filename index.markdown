@@ -3,7 +3,10 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Intro
+home_title: Introduction
+title: Home
+permalink: /
+order: 1
 ---
 
 Hello Jekyll!

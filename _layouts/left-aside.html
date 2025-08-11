@@ -6,22 +6,33 @@ layout: default
   <aside class="left-aside">
     <h2 class="post-list-heading">{{ page.list_title | default: "My Posts" }}</h2>
     {%- if site.posts.size > 0 -%}
-      <ul class="post-list">
-        {%- for post in site.posts -%}
-        <li>
-          {%- assign date_format = site.minima.date_format | default: "%d/%m/%y" -%}
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-              ({{ post.date | date: date_format }})
-            </a>
-          </h3>
-          {%- if site.show_excerpts -%}
-            {{ post.excerpt }}
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      </ul>
+      {%- assign date_format = "%d/%m/%y" -%}
+      <h3 class="post-list-time-sort" >Latest:</h3>
+      {%- assign latest = site.posts[0] -%}
+      <h4>
+        <a class="post-link" href="{{ latest.url | relative_url }}">
+          {{ latest.title | escape }}
+          ({{ latest.date | date: date_format }})
+        </a>
+      </43>
+      {%- if site.posts.size > 1 -%}
+        <h3 class="post-list-time-sort" >Older:</h3>
+        <ul class="post-list">
+          {%- for post in site.posts offset:1 -%}
+          <li>
+            <h4>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+                ({{ post.date | date: date_format }})
+              </a>
+            </h4>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
     {%- else -%}
       <i>(No posts yet)</i>
     {%- endif -%}
